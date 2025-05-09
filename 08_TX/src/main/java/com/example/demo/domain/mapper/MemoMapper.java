@@ -1,4 +1,4 @@
-package com.example.demo.mapper;
+package com.example.demo.domain.mapper;
 
 import com.example.demo.domain.dto.MemoDto;
 import org.apache.ibatis.annotations.*;
