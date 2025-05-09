@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--헤더 영역 insert 현재 내로 삼입 할떄 re 바꾸는?-->
+    <!--<div th:insert="~{상대경로}"></div> 실행후 Elements를 확인하면 div 안에 들어간것을 볼수 있다.-->
+    <div th:insert="~{th/fragments/header::headerFragment}"></div>
+    <h2>TEST2 PAGE</h2>
+    <!--푸터 영역 실행후 Elements를 확인하면 -->
+    <div th:replace="~{th/fragments/footer::footerFragment}"></div>
+
+</body>
+</html>

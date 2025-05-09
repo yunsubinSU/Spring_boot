@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .incident-container {
+        display: inline-block;
+        text-align: left;
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .incident-container div {
+        margin: 5px 0;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    hr {
+        width: 80%;
+        margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>대구 돌발 사고 정보 실시간 조회</h1>
+  <hr/>
+  <th:block th:each="item:${list}">
+    <p>
+      <div th:text="${item.LOCATION}"></div>
+      <div th:text="${item.INCIDENTTITLE}"></div>
+      <div th:text="${item.TROUBLEGRADE}"></div>
+      <div th:text="${item.STARTDATE}"></div>
+      <div th:text="${item.INCIDENTSUBCODE}"></div>
+      <div th:text="${item.REPORTDATE}"></div>
+      <div th:text="${item.ENDDATE}"></div>
+      <div th:text="${item.COORDX}"></div>
+      <div th:text="${item.INCIDENTCODE}"></div>
+      <div th:text="${item.INCIDENTID}"></div>
+      <div th:text="${item.COORDY}"></div>
+      <div th:text="${item.TRAFFICGRADE}"></div>
+      <hr/>
+    </p>
+  </th:block>
+</body>
+</html>
